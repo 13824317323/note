@@ -1,0 +1,16 @@
+//火狐表单input默认是 浏览器保存的数据
+
+解决：先只读   点击时开启
+readonly onfocus="this.removeAttribute('readonly');"
+
+
+//中文 英文 页面效果不同（angular中如何监控页面加载完毕）
+https://blog.csdn.net/superjunjin/article/details/53355379  
+
+解决：angular 页面加载完毕后执行(JQ)
+    angular.element(document).ready(function () {
+        if ($scope.lang == "zh") {
+            $('md-tabs .md-tab.md-active').css({fontFamily:"微软雅黑"})
+        }
+
+    });
