@@ -1,16 +1,16 @@
-//»ğºü±íµ¥inputÄ¬ÈÏÊÇ ä¯ÀÀÆ÷±£´æµÄÊı¾İ
+//ç«ç‹è¡¨å•inputé»˜è®¤æ˜¯ æµè§ˆå™¨ä¿å­˜çš„æ•°æ®
 
-½â¾ö£ºÏÈÖ»¶Á   µã»÷Ê±¿ªÆô
+è§£å†³ï¼šå…ˆåªè¯»   ç‚¹å‡»æ—¶å¼€å¯
 readonly onfocus="this.removeAttribute('readonly');"
 
 
-//ÖĞÎÄ Ó¢ÎÄ Ò³ÃæĞ§¹û²»Í¬£¨angularÖĞÈçºÎ¼à¿ØÒ³Ãæ¼ÓÔØÍê±Ï£©
+//ä¸­æ–‡ è‹±æ–‡ é¡µé¢æ•ˆæœä¸åŒï¼ˆangularä¸­å¦‚ä½•ç›‘æ§é¡µé¢åŠ è½½å®Œæ¯•ï¼‰
 https://blog.csdn.net/superjunjin/article/details/53355379  
 
-½â¾ö£ºangular Ò³Ãæ¼ÓÔØÍê±ÏºóÖ´ĞĞ(JQ)
+è§£å†³ï¼šangular é¡µé¢åŠ è½½å®Œæ¯•åæ‰§è¡Œ(ä½¿ç”¨JQçš„æ–¹æ³•)
     angular.element(document).ready(function () {
         if ($scope.lang == "zh") {
-            $('md-tabs .md-tab.md-active').css({fontFamily:"Î¢ÈíÑÅºÚ"})
+            $('md-tabs .md-tab.md-active').css({fontFamily:"å¾®è½¯é›…é»‘"})
         }
 
     });
