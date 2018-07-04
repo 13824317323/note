@@ -1,4 +1,4 @@
-//火狐表单input默认是 浏览器保存的数据
+﻿//火狐表单input默认是 浏览器保存的数据
 
 解决：先只读   点击时开启
 readonly onfocus="this.removeAttribute('readonly');"
@@ -14,3 +14,28 @@ https://blog.csdn.net/superjunjin/article/details/53355379
         }
 
     });
+
+
+//video标签 autoplay无效
+
+解决：
+最近写的页面在chrome中打开时，video标签都不能自动播放（奇怪的是相同的视频，两个月前在chrome下播放还是正常的；
+但现在，mac下一直无法播放，只有在controls的模式下点击播放按钮才可以播放；而windows下按F5刷新后可以播放，但是右键刷新页面无法播放），Firefox缺是正常播放。
+
+最后找到了一篇博客说是要在video标签中添加muted属性，亲测有效，代码如下：
+
+<video muted src="" autoplay loop></video>
+
+autoplay无效可能有两个原因：
+
+1.视频太大
+
+2.视频不在根目录下
+
+于是针对上述两个原因进行改进：
+
+1.将ogg转为为mp4格式，并将十几M文件压缩为2、3M
+2.将mp4格式视频放在根目录下，并修改src路径
+ps：原来的ogg文件放在根目录下，autoplay还是无效；mp4文件放在video目录下引用，autoplay还是无效。
+
+原微博链接如下：https://blog.csdn.net/taiyangmiaomiao/article/details/80266625
