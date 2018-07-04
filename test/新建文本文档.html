@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>努力做个地球仪</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .circle{
+            border-radius: 100%;
+            height: 100px;
+            width: 100px;
+            left: 200px;
+            top: 200px;
+            position: absolute;
+            border: 1px solid #394057;
+            transform-style: preserve-3d;
+        }
+        .equator{
+            top:260px;
+            transform: rotateX(70deg) translateZ(70px)
+        }
+        .weft1{
+            -webkit-animation-duration:10s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-name:weft1;
+        }
+        .weft2{
+            -webkit-animation-duration:10s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-name:weft2;
+        }
+        .weft3{
+            -webkit-animation-duration:10s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-name:weft3;
+        }
+        .weft4{
+            -webkit-animation-duration:10s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-name:weft4;
+        }
+        .hoder{
+            height: 159px;
+            width: 100px;
+            left: 150px;
+            top: 180px;
+            position: absolute;
+            border-right:2px solid #394057 ;
+        }
+        .hoder2{
+            border-radius: 100%;
+            border-left:3px solid #394057 ;
+            height: 140px;
+            width: 140px;
+            top:180px;
+            left: 180px;
+            position: absolute;
+        }
+        .bottom{
+            height:100px;
+            width: 100px;
+            border-radius: 100%;
+            left: 200px;
+            top: 355px;
+            position: absolute;
+            transform-style: preserve-3d;
+            transform: rotateX(70deg) translateZ(70px);
+            z-index: -100;
+            border:2px solid #394057 ;
+        }
+        .bottom2{
+            height:10px;
+            width: 10px;
+            border-radius: 100%;
+            left: 244px;
+            top: 397px;
+            position: absolute;
+            transform-style: preserve-3d;
+            transform: rotateX(70deg) translateZ(70px);
+            z-index: -100;
+            border:2px solid #394057 ;
+
+        }
+        @-webkit-keyframes weft1{
+            from{
+                -webkit-transform:rotateY(40deg);
+            }
+            to{
+                -webkit-transform:rotateY(400deg);
+            }
+        }
+        @-webkit-keyframes weft2{
+            from{
+                -webkit-transform:rotateY(80deg);
+            }
+            to{
+                -webkit-transform:rotateY(440deg);
+            }
+        }
+        @-webkit-keyframes weft3{
+            from{
+                -webkit-transform:rotateY(120deg);
+            }
+            to{
+                -webkit-transform:rotateY(480deg);
+            }
+        }
+        @-webkit-keyframes weft4{
+            from{
+                -webkit-transform:rotateY(160deg);
+            }
+            to{
+                -webkit-transform:rotateY(520deg);
+            }
+        }
+
+        #test{
+            width: 0px;
+            height: 0px;
+            border-top: 20px solid #337ab7;
+            border-right: 20px solid #5fb7b2;
+            border-bottom: 20px solid #80885b;
+            border-left: 20px solid #cac3a8;
+            border-width: 50px;
+
+            position: absolute;
+            top: 150px;
+            left: 420px;
+            transform-style: preserve-3d;
+            /*transform-origin: left top;*/
+            /*transform: rotate3d(0,1,0,60deg) ;*/
+            transition: all 10s;
+        }
+        #test-1, #test-2{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: #a6e1ec;
+            transform-style: preserve-3d;
+            transform: translateZ(50px);
+            top: -25px;
+            left: -25px;
+        }
+        #test-2{
+            transform: translateZ(-50px);
+            background-color: #d58512;
+        }
+        #test:hover{
+
+            /*background-color: #dddcb2;*/
+            /*transform: translate3d(50px, 100px,50px);*/
+            /*transform-style: preserve-3d;*/
+            transform-style: preserve-3d;
+            transform: rotate3d(0,0,1,180deg) ;
+
+            /*transform: translate3d(20px,20px,50px);*/
+        }
+
+        #test:out-of-range{
+            background-color: #b368ff;
+        }
+
+        #test2 {width:200px; height:200px; margin-left:100px; margin-top:400px;}
+        #test2 img {width:200px; height:200px; border-radius:100px; animation:myfirst 5s linear infinite; -webkit-animation:myfirst 5s linear infinite; animation-play-state:running; -webkit-animation-play-state:running;}
+        #test2 img:hover {animation-play-state:paused; -webkit-animation-play-state:paused;}
+
+        @keyframes myfirst {0% {transform:rotate(0deg);} 100% {transform:rotate(360deg);}}
+        @-webkit-keyframes myfirst {0% {transform:rotate(0deg);} 100% {transform:rotate(360deg);}}
+    </style>
+</head>
+<body>
+<div class="hoder"></div>
+<div class="circle"></div>
+<div class="circle equator"></div>
+<div class="circle weft1"></div>
+<div class="circle weft2"></div>
+<div class="circle weft3"></div>
+<div class="circle weft3"></div>
+<div class="circle weft4"></div>
+<div class="hoder2"></div>
+<div class="bottom"></div>
+<div class="bottom2"></div>
+
+<div id="test">
+    <div id="test-1"></div>
+    <div id="test-2"></div>
+</div>
+
+<div id="test2">
+    <img src="./img/earth.png" alt="">
+</div>
+<video width="320" height="240" controls>
+    <source src="./img/xc.mp4">
+    您的浏览器不支持 video 标签。
+</video>
+</body>
+</html>
